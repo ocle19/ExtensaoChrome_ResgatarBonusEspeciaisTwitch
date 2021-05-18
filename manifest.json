@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "name": "Pegar moeda twitch",
+    "description": "Pegar moeda twitch",
+    "author": "Cleber Siqueira",
+    "browser_action": {
+   	 "default_title": "Pegar moeda twitch",
+   	 "default_popup": "index.html",
+   	 "default_icon": "icon.png"
+    },
+      "content_scripts": [
+        {
+          "matches": [
+            "https://www.twitch.tv/*"
+          ],
+          "js": [
+            "background.js"
+          ]
+        }
+      ],
+
+    "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'"
+
+
+}
